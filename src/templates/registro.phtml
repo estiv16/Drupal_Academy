@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <title>Registro</title>
+</head>
+<body>
+  <div class="formulario">
+    <div class="caja"><img src="img/login.jpg" class="login"></div>
+      <h1>Registro</h1>
+      <form action="/registro" method="post">
+        <div class="espacio">
+        <label for="name">Nombre completo:</label>
+        <input type="text" id="name" name="name" class="input">
+        </div>
+        <div class="espacio">
+        <label for="telefono">Telefono:</label>
+        <input type="text" id="telefono" name="telefono" class="input">
+        </div>
+        <div class="espacio">
+        <label for="direccion">Direcion:</label>
+        <input type="text" id="direccion" name="direccion" class="input">
+        </div>
+        <div class="espacio">
+        <label for="fnacimiento">Fecha Nacimiento:</label>
+        <input type="date" id="fnacimiento" name="fnacimiento" class="input">
+        </div>
+        <div class="espacio">
+        <label for="pwd">Contraseña:</label>
+        <input type="password" id="pwd" name="pwd" class="input">
+        </div>
+        <div class="espacio">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="input">
+        </div>
+
+        <label for="nacionalidad" class="nacionalidad">Nacionalidad:</label>
+        
+        <select name="nacionalidad" id="nacionalidad" autofocus>
+          <option value="volvo">Colombia</option>
+          <option value="saab">peru</option>
+          <option value="opel">venezuela</option>
+          <option value="audi">canada</option>
+        </select><br><br>
+        
+      <input type="submit" value="Submit" id="submit" class="btn">
+
+      </form>
+  </div>
+</body>
+</html>

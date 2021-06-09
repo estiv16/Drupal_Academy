@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Listado de Usuarios</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Listado Usuarios</h1>
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>IdUsuario</th>
+        <th>Fecha</th>
+        <th>Mensaje</th>
+        
+      </tr>
+      <?php foreach($publicaciones as $publicacion): ?>
+      <tr>
+        <td><?=$publicacion->getId()?></td>
+        <td><?=$publicacion->getIdUsuario()?></td>
+        <td><?=$publicacion->getDate()?></td>
+        <td><?=$publicacion->getTexto()?></td>
+ 
+        <td>
+          <a href="/publicacion/<?=$publicacion->getId()?>/edit"><button>Editar</button></a>
+          <a href="/publicacion/<?=$publicacion->getId()?>/delete"><button>Eliminar</button></a>
+        </td>
+      </tr>
+      <?php endforeach; ?>
+    </table>
+    <a href="/publicacion/create"><button>Crear</button></a>
+  </div>
+</body>

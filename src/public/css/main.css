@@ -1,0 +1,59 @@
+body,html{
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgb(231, 231, 231);
+    font-family: 'Anton', sans-serif;
+}
+.formulario{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 360px;
+    height: auto;
+    padding: 20px;
+    position: absolute;
+    margin-top: 3%;
+    left: 40%;
+    text-align: left;
+    background-color: rgb(216, 228, 255);
+    margin-bottom: 50;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+.input{
+    
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+    width: 95%;
+    margin: center;
+    padding: 5px;
+}
+.btn{
+    color: black;
+    padding: 10px;
+    background-color: rgba(0, 47, 255, 0.486) ;
+    margin-left: 5%;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 90%;
+}
+.caja{
+    border: 1px solid black;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    margin: 10% 23%;
+}
+.login{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+.espacio{
+    margin-bottom: 4%;
+}

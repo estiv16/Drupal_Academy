@@ -1,0 +1,56 @@
+body,html{
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgb(231, 231, 231);
+    font-family: 'Anton', sans-serif;
+}
+.form{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 360px;
+    height: auto;
+    padding: 20px;
+    position: absolute;
+    margin-top: 10%;
+    left: 40%;
+    text-align: left;
+    background-color: rgb(216, 228, 255);
+    margin-bottom: 50;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+.caja{
+    border: 1px solid black;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    margin: 10% 23%;
+}
+.comentario{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+.input{
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+    width: 40%;
+    margin: center;
+    padding: 5px;
+    margin-bottom: 2%;
+}
+.select-id{
+    margin-left: 2%;
+}
+.id{
+    margin-bottom: 2%;
+}
+.text{
+    margin-bottom: 2%;
+}

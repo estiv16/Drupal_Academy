@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registro</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <div class="form register-form">
+    <h1><?= $pais ? "Editar" : "Crear" ?> pais <?= $pais ? $pais->getNombre(): "" ?></h1>
+    <form action="/pais/<?= $pais ? $pais->getId() . "/edit":"create" ?>" method="post">
+      <label for="name">Nombre: </label>
+      <input type="text" name="name" value="<?= $pais ? $pais->getNombre() : "" ?>">
+      <br>
+      <input type="submit" value="Guardar">
+    </form>
+  </div>
+</body>

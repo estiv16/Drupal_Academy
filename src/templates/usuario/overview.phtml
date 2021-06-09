@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Listado de Usuarios</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Listado Usuarios</h1>
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Telefono</th>
+        <th>Direccion</th>
+        <th>password</th>
+        <th>date</th>
+        <th>Nacionalidad</th>
+        <th>email</th>
+        <th>Operaciones</th>
+      </tr>
+      <?php foreach($usuarios as $usuario): ?>
+      <tr>
+        <td><?=$usuario->getId()?></td>
+        <td><?=$usuario->getNombre()?></td>
+        <td><?=$usuario->getTelefono()?></td>
+        <td><?=$usuario->getDireccion()?></td>
+        <td><?=$usuario->getPassword()?></td>
+        <td><?=$usuario->getDate()?></td>
+        <td><?=$usuario->getIdNacionalidad()?></td>
+        <td><?=$usuario->getEmail()?></td>
+        <td>
+          <a href="/usuario/<?=$usuario->getId()?>/edit"><button>Editar</button></a>
+          <a href="/usuario/<?=$usuario->getId()?>/delete"><button>Eliminar</button></a>
+        </td>
+      </tr>
+      <?php endforeach; ?>
+    </table>
+    <a href="/usuario/create"><button>Crear</button></a>
+  </div>
+</body>

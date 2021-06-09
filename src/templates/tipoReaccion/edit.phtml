@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registro</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <div class="form register-form">
+    <h1><?= $tipoReaccion ? "Editar" : "Crear" ?> Reaccion <?= $tipoReaccion ? $tipoReaccion->getTipoCara(): "" ?></h1>
+    <form action="/tiporeaccion/<?= $tipoReaccion ? $tipoReaccion->getId() . "/edit":"create" ?>" method="post">
+      <label for="tipoCara">Tipo de Reaccion: </label>
+      <input type="text" name="tipoCara" value="<?= $tipoReaccion ? $tipoReaccion->getTipoCara() : "" ?>">
+      <br>
+      <label for="imagen">imagen: </label>
+      <input type="text" name="imagen" value="<?= $tipoReaccion ? $tipoReaccion->getImagen() : "" ?>">
+      <br>
+      <input type="submit" value="Guardar">
+    </form>
+  </div>
+</body>

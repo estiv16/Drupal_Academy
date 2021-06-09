@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registro</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <div class="form register-form">
+    <h1><?= $usuario ? "Editar" : "Crear" ?> Nombre <?= $usuario ? $usuario->getNombre(): "" ?></h1>
+    <form action="/usuario/<?= $usuario ? $usuario->getId() . "/edit":"create" ?>" method="post">
+      <label for="nombre">Nombre: </label>
+      <input type="text" name="nombre" value="<?= $usuario ? $usuario->getNombre() : "" ?>">
+      <br>
+      <label for="telefono">Telefono: </label>
+      <input type="text" name="telefono" value="<?= $usuario ? $usuario->getTelefono() : "" ?>">
+      <br>
+      <label for="direccion">Direccion: </label>
+      <input type="text" name="direccion" value="<?= $usuario ? $usuario->getDireccion() : "" ?>">
+      <br>
+      <label for="password">Contraseña: </label>
+      <input type="text" name="password" value="<?= $usuario ? $usuario->getPassword() : "" ?>">
+      <br>
+      <label for="date">Fecha: </label>
+      <input type="datetime-local" name="date" value="<?= $usuario ? $usuario->getDate() : "" ?>">
+      <br>
+      <label for="idNacionalidad" class="nacionalidad">Nacionalidad:</label>
+        
+        <select name="idNacionalidad" id="nacionalidad" autofocus>
+          <?php foreach($paises as $pais ): ?>
+          <option value="<?=$pais->getId()?>"><?=$pais->getNombre()?></option>
+          <?php endforeach; ?>
+        </select><br><br>
+
+      <label for="email">email: </label>
+      <input type="text" name="email" value="<?= $usuario ? $usuario->getEmail() : "" ?>">
+      <br>
+      <input type="submit" value="Guardar">
+    </form>
+  </div>
+</body>
